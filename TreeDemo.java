@@ -115,7 +115,15 @@ class BinarySearchTree{
    */
    public int getMin(Node root){
       //implement me
-      return 0;
+      if(root == null){
+         return Integer.MAX_VALUE;
+      }
+      
+      if(root.left != null){
+         return getMin(root.left);
+      }else{
+         return root.value;
+      }
    }
   
   
